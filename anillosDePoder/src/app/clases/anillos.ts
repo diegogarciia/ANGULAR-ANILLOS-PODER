@@ -8,7 +8,8 @@ export class Anillos {
       portador: 'Galadriel',
       raza: 'Elfo',
       poder: 'Protección y preservación',
-      corrupcion: 5
+      corrupcion: 5,
+      
     },
     {
       nombre: 'Anillo de Narya',
