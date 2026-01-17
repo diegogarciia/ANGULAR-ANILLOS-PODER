@@ -5,6 +5,7 @@ import { DetalleRaza } from './raza/detalle-raza/detalle-raza';
 import { BusquedaRazaNombre } from './raza/buscar-raza-nombre/buscar-raza-nombre';
 import { BusquedaRazaRegion } from './raza/buscar-raza-region/buscar-raza-region';
 import { BusquedaRazaLongevidad } from './raza/buscar-raza-longevidad/buscar-raza-longevidad';
+import { BusquedaRazaDescripcion } from './raza/buscar-raza-descripcion/buscar-raza-descripcion';
 
 export const routes: Routes = [
     { path: 'detalle', component: Detalle },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'buscarRazaPorNombre', component: BusquedaRazaNombre},
     { path: 'buscarRazaPorRegion', component: BusquedaRazaRegion},
     { path: 'buscarRazaPorLongevidad', component: BusquedaRazaLongevidad},
+    { path: 'buscarRazaPorDescripcion', component: BusquedaRazaDescripcion},
 
 ];
