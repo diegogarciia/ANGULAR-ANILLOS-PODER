@@ -14,40 +14,5 @@ import { RouterLink } from '@angular/router';
 })
 export class DetalleRaza {
 
-  regiones = ['Mordor','Rivendel','La Comarca']
-  afinidades = ['Tiene', 'No tiene']
-
-
-
- formulario: FormGroup = new FormGroup({
-    nombre: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3)
-    ]),
-    descripcion: new FormControl('', [
-      Validators.required,
-      Validators.minLength(10)
-    ]),
-    longevidad: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3)
-    ]),
-    nivelCorrupcion: new FormControl(0, [
-      Validators.required,
-      
-    ]),
-    regionPrincipal: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3)
-    ]),
-    afinidadMagica: new FormControl('', [
-      Validators.required
-    ])
-  
-  })
-
-  enviar(){
-    alert
-  }
  }
 
