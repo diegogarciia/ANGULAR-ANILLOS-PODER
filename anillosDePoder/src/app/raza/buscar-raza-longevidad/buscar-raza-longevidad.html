@@ -1,0 +1,42 @@
+    <div class="barraBusqueda">
+     <div class="acciones">
+    <table>
+        <tr>
+            <td><p-button routerLink="/buscarRazaPorNombre" id="buscarRazaPorNombre" styleClass="p-button-raised">Buscar Raza Por Nombre</p-button></td>
+            <td><p-button routerLink="/buscarRazaPorRegion" id="buscarRazaPorRegion" styleClass="p-button-raised">Buscar Raza Por Región</p-button></td>
+            <td><p-button routerLink="/buscarRazaPorLongevidad" id="buscarRazaPorLongevidad" styleClass="p-button-raised">Buscar Raza Por Longevidad</p-button></td>
+            <td><p-button routerLink="/buscarRazaPorDescripcion" id="buscarRazaPorDescripcion" styleClass="p-button-raised">Buscar Raza Por Descripción</p-button></td>
+            <td><p-button routerLink="/crearRaza" id="crearRaza" styleClass="p-button-raised">Crear Raza</p-button></td>
+        </tr>
+    </table>    
+    </div>
+    </div>
+
+    <div class="busqueda">
+       <input type="text" pInputText [(ngModel)]="campoBusqueda" />
+       <p-button label="Buscar Raza Por Longevidad" icon="pi pi-check"  (onClick)="buscarRazaLongevidad()" severity="danger" />
+    </div>
+
+    <p-table [value]="razasFiltradas">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Longevidad</th>
+            <th>Corrupción</th>
+            <th>Región</th>
+            <th>Afinidad</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-raza>
+        <tr>
+            <td>{{ raza.nombre }}</td>
+            <td>{{ raza.descripcion }}</td>
+            <td>{{ raza.longevidad }}</td>
+            <td>{{ raza.nivelCorrupcion }}</td>
+            <td>{{ raza.regionPrincipal }}</td>
+            <td>{{ raza.afinidadMagica }}</td>
+        </tr>
+    </ng-template>
+</p-table>
