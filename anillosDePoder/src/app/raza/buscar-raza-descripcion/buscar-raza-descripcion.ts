@@ -6,11 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-
+import { TableModule } from 'primeng/table'; 
 
 @Component({
   selector: 'app-busqueda',
-  imports: [InputTextModule,FormsModule,ButtonModule,CommonModule,RouterLink],
+  imports: [InputTextModule,FormsModule,ButtonModule,CommonModule,RouterLink, TableModule],
   templateUrl: './buscar-raza-descripcion.html',
   styleUrl: './buscar-raza-descripcion.css',
 })
