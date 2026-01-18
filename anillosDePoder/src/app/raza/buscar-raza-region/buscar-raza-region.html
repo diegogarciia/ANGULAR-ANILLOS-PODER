@@ -17,36 +17,26 @@
        <p-button label="Buscar Raza Por Region" icon="pi pi-check"  (onClick)="buscarRazaRegion()" severity="danger" />
     </div>
 
-    <div>
-        <table class="tabla">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Longevidad</th>
-                    <th>Corrupción</th>
-                    <th>Región</th>
-                    <th>Afinidad</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (raza of razasFiltradas; track raza.nombre) {
-                    <tr>
-                        <td>{{ raza.nombre }}</td>
-                        <td>{{ raza.descripcion }}</td>
-                        <td>{{ raza.longevidad }}</td>
-                        <td>{{ raza.nivelCorrupcion }}</td>
-                        <td>{{ raza.regionPrincipal }}</td>
-                        <td>{{ raza.afinidadMagica }}</td>
-                    </tr>
-                } @empty {
-                    <tr>
-                        <td colspan="4">No se encontraron razas</td>
-                    </tr>
-                }
-            </tbody>
+    <p-table [value]="razasFiltradas">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Longevidad</th>
+            <th>Corrupción</th>
+            <th>Región</th>
+            <th>Afinidad</th>
+        </tr>
+    </ng-template>
 
-
-        </table>
-
-    </div>
+    <ng-template pTemplate="body" let-raza>
+        <tr>
+            <td>{{ raza.nombre }}</td>
+            <td>{{ raza.descripcion }}</td>
+            <td>{{ raza.longevidad }}</td>
+            <td>{{ raza.nivelCorrupcion }}</td>
+            <td>{{ raza.regionPrincipal }}</td>
+            <td>{{ raza.afinidadMagica }}</td>
+        </tr>
+    </ng-template>
+</p-table>
