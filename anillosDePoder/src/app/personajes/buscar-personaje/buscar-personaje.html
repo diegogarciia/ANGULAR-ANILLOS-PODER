@@ -1,0 +1,28 @@
+<h2>Lista de Personajes</h2>
+
+<div class="tabla-contenedor">
+    @if (listaDePersonajes().length > 0) {
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Corrupción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (personaje of listaDePersonajes(); track personaje.id) {
+                    <tr>
+                        <td>{{ personaje.id }}</td>
+                        <td>{{ personaje.nombre }}</td>
+                        <td>{{ personaje.raza }}</td>
+                        <td>{{ personaje.nivelCorrupcion }}%</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    } @else {
+        <p>No se han encontrado personajes o cargando...</p>
+    }
+</div>
