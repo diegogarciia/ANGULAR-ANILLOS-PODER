@@ -1,12 +1,12 @@
-import { Component, inject, OnInit, signal, Signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { PersonajeService } from '../../services/personaje';
 import { Personaje } from '../personaje.model'; 
 
 @Component({
   selector: 'app-buscar-personaje',
-  standalone: true, 
   templateUrl: './buscar-personaje.html',
 })
+
 export class BuscarPersonajeComponent implements OnInit {
   private personajeService = inject(PersonajeService);
 
