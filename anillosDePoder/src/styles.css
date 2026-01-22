@@ -113,3 +113,14 @@ body {
   justify-content: center;
   display: flex;
 }
+
+.tabla-contenedor button {
+  padding: 8px 16px;
+  background-color: var(--oro-anillo);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
