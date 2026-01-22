@@ -1,5 +1,3 @@
-<h2>Lista de Personajes</h2>
-
 <div class="tabla-contenedor">
     @if (listaDePersonajes().length > 0) {
         <table border="1">
@@ -9,6 +7,7 @@
                     <th>Raza</th>
                     <th>Fecha de Nacimiento</th>
                     <th>Corrupción</th>
+                    <th>Editar Personaje</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,6 +17,7 @@
                         <td>{{ personaje.raza }}</td>
                         <td>{{ personaje.fechaNacimiento }}</td>
                         <td>{{ personaje.nivelCorrupcion }}%</td>
+                        <td><button routerLink="/editarPersonaje" id="btn-editarPersonaje">Editar</button></td>
                     </tr>
                 }
             </tbody>
