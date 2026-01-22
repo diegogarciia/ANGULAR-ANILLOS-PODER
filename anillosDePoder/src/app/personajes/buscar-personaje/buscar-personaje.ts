@@ -27,4 +27,8 @@ export class BuscarPersonajeComponent implements OnInit {
       }
     });
   }
+
+  editar(id: number) {
+    console.log("Editar personaje con ID:", id);
+  }
 }

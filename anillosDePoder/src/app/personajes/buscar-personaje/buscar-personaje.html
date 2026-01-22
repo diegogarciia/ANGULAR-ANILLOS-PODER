@@ -17,7 +17,7 @@
                         <td>{{ personaje.raza }}</td>
                         <td>{{ personaje.fechaNacimiento }}</td>
                         <td>{{ personaje.nivelCorrupcion }}%</td>
-                        <td><button routerLink="/editarPersonaje" id="btn-editarPersonaje">Editar</button></td>
+                        <td><input type="button" id="btnEditar" (click)="editar(personaje.id)" value="Editar"></td>
                     </tr>
                 }
             </tbody>
