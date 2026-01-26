@@ -106,3 +106,28 @@ body {
 .tabla tr:hover {
   background-color: rgba(201, 170, 113, 0.1);
 }
+
+.tabla-contenedor {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: center;
+  display: flex;
+}
+
+.tabla-contenedor input[type="button"] {
+  background-color: var(--oro-anillo);
+  border: none;
+  color: #000;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.insertar-personaje {
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 1%;
+}

@@ -1,0 +1,36 @@
+<div class="insertar-personaje">
+    <p-button 
+        id="btnInsertarPersonaje" 
+        label="Insertar Nuevo Personaje" 
+        icon="pi pi-plus-circle" 
+        (onClick)="insertar()">
+    </p-button>
+</div>
+<div class="tabla-contenedor">
+    @if (listaDePersonajes().length > 0) {
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Corrupción</th>
+                    <th>Editar Personaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (personaje of listaDePersonajes(); track personaje.id) {
+                    <tr>
+                        <td>{{ personaje.nombre }}</td>
+                        <td>{{ personaje.raza }}</td>
+                        <td>{{ personaje.fechaNacimiento }}</td>
+                        <td>{{ personaje.nivelCorrupcion }}%</td>
+                        <td><input type="button" id="btnEditar" (click)="editar(personaje.id)" value="Editar"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    } @else {
+        <p>No se han encontrado personajes...</p>
+    }
+</div>
