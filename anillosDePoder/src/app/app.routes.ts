@@ -8,6 +8,7 @@ import { BusquedaRazaLongevidad } from './raza/buscar-raza-longevidad/buscar-raz
 import { BusquedaRazaDescripcion } from './raza/buscar-raza-descripcion/buscar-raza-descripcion';
 import { CrearRaza } from './raza/crear-raza/crear-raza';
 import { BuscarPersonajeComponent } from './personajes/buscar-personaje/buscar-personaje';
+import { EditarPersonajeComponent } from './personajes/editar-personaje/editar-personaje';
 
 export const routes: Routes = [
     { path: 'detalle', component: Detalle },
@@ -18,6 +19,8 @@ export const routes: Routes = [
     { path: 'buscarRazaPorLongevidad', component: BusquedaRazaLongevidad},
     { path: 'buscarRazaPorDescripcion', component: BusquedaRazaDescripcion},
     { path: 'crearRaza', component: CrearRaza},
-    { path: 'personajes', component: BuscarPersonajeComponent }
+    { path: 'personajes', component: BuscarPersonajeComponent },
+    { path: 'editar-personaje/:id', component: EditarPersonajeComponent },
+    { path: 'insertar-personaje', component: EditarPersonajeComponent}
 
 ];

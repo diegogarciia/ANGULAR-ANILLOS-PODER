@@ -1,3 +1,11 @@
+<div class="insertar-personaje">
+    <p-button 
+        id="btnInsertarPersonaje" 
+        label="Insertar Nuevo Personaje" 
+        icon="pi pi-plus-circle" 
+        (onClick)="insertar()">
+    </p-button>
+</div>
 <div class="tabla-contenedor">
     @if (listaDePersonajes().length > 0) {
         <table border="1">
@@ -23,6 +31,6 @@
             </tbody>
         </table>
     } @else {
-        <p>No se han encontrado personajes o cargando...</p>
+        <p>No se han encontrado personajes...</p>
     }
 </div>
