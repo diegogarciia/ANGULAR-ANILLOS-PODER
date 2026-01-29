@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterLink, Routes } from '@angular/router';
 import { Detalle } from './anillo/detalle/detalle';
 import { Busqueda } from './anillo/busqueda/busqueda';
 import { DetalleRaza } from './raza/detalle-raza/detalle-raza';
@@ -9,6 +9,9 @@ import { BusquedaRazaDescripcion } from './raza/buscar-raza-descripcion/buscar-r
 import { CrearRaza } from './raza/crear-raza/crear-raza';
 import { BuscarPersonajeComponent } from './personajes/buscar-personaje/buscar-personaje';
 import { EditarPersonajeComponent } from './personajes/editar-personaje/editar-personaje';
+import { Component } from '@angular/core';
+import { Padre } from './modales/padre/padre';
+import { ConfirmarPopup } from './modales/confirmar-popup/confirmar-popup'
 
 export const routes: Routes = [
     { path: 'detalle', component: Detalle },
@@ -21,6 +24,8 @@ export const routes: Routes = [
     { path: 'crearRaza', component: CrearRaza},
     { path: 'personajes', component: BuscarPersonajeComponent },
     { path: 'editar-personaje/:id', component: EditarPersonajeComponent },
-    { path: 'insertar-personaje', component: EditarPersonajeComponent}
+    { path: 'insertar-personaje', component: EditarPersonajeComponent},
+    { path: 'modal', component: ConfirmarPopup }, 
+    { path: 'padre', component: Padre }
 
 ];
