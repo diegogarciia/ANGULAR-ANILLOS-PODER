@@ -15,7 +15,8 @@ export class Padre {
     message: '¿Quieres borrar el personaje?',
     header: 'Elver',
     nameButton: "Borrar",
-    severity: "danger"
+    severity: "danger",
+    accion: () => {}
   }
 
 }

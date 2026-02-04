@@ -22,30 +22,35 @@ export class ConfirmarPopup {
   confirm2(event: Event) {
     this.confirmationService.confirm({
       target: event.currentTarget as EventTarget,
-      message: '¿Quieres borrar el personaje?',
+      message: this.config.message, 
+      header: this.config.header,
       icon: 'pi pi-info-circle',
       rejectButtonProps: {
-        label: 'Cancel',
+        label: 'Cancelar',
         severity: 'secondary',
         outlined: true,
       },
       acceptButtonProps: {
-        label: 'Delete',
-        severity: 'danger',
+        label: this.config.nameButton,
+        severity: this.config.severity,
       },
       accept: () => {
+        if (this.config.accion) {
+          this.config.accion();
+        }
+        
         this.messageService.add({
-          severity: 'info',
-          summary: 'Confirmed',
-          detail: 'Record deleted',
+          severity: 'success',
+          summary: 'Confirmado',
+          detail: 'Operación realizada con éxito',
           life: 3000,
         });
       },
       reject: () => {
         this.messageService.add({
-          severity: 'error',
-          summary: 'Rejected',
-          detail: 'You have rejected',
+          severity: 'warn',
+          summary: 'Cancelado',
+          detail: 'Has cancelado la acción',
           life: 3000,
         });
       },
