@@ -18,10 +18,18 @@
       
       <ng-template pTemplate="header">
         <tr>
-          <th>Nombre</th>
-          <th>Raza</th>
-          <th>Fecha de Nacimiento</th>
-          <th>Corrupción</th>
+          <th pSortableColumn="nombre">
+            Nombre <p-sortIcon field="nombre"></p-sortIcon>
+          </th>
+          <th pSortableColumn="raza">
+            Raza <p-sortIcon field="raza"></p-sortIcon>
+          </th>
+          <th pSortableColumn="fechaNacimiento">
+            Fecha de Nacimiento <p-sortIcon field="fechaNacimiento"></p-sortIcon>
+          </th>
+          <th pSortableColumn="nivelCorrupcion">
+            Corrupción <p-sortIcon field="nivelCorrupcion"></p-sortIcon>
+          </th>
           <th>Edición</th>
           <th>Baja Física</th>
           <th>Baja Lógica</th>
