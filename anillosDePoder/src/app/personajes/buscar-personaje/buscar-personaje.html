@@ -54,31 +54,31 @@
 
           <td>
             <p-button
-              label="Baja Física"
-              icon="pi pi-trash"
               severity="danger"
               [outlined]="true"
               (onClick)="prepararBajaFisica(personaje, $event)"
-            />
+              pTooltip="Baja Física" tooltipPosition="top">
+              <img src="./assets/img/img-bajafisica.png" alt="Baja Física" width="20" height="20">
+            </p-button>
           </td>
 
           <td>
             @if (!personaje.fechaBaja) {
               <p-button
-                label="Baja Lógica"
-                icon="pi pi-user-minus"
                 severity="warn"
                 [outlined]="true"
                 (onClick)="prepararBajaLogica(personaje, $event)"
-              />
+                pTooltip="Baja Lógica" tooltipPosition="top">
+                <img src="./assets/img/img-bajalogica.png" alt="Baja Lógica" width="20" height="20">
+              </p-button>
             } @else {
               <p-button
-                label="Reactivar"
-                icon="pi pi-refresh"
                 severity="success"
                 [outlined]="true"
                 (onClick)="prepararReactivacion(personaje, $event)"
-              />
+                pTooltip="Reactivar" tooltipPosition="top">
+                <img src="./assets/img/img-reactivar.png" alt="Reactivar" width="20" height="20">
+              </p-button>
             }
           </td>
         </tr>
