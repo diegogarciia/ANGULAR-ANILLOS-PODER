@@ -5,12 +5,13 @@ import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { ConfirmarPopup } from '../../modales/confirmar-popup/confirmar-popup'; 
 import { ConfiguracionPopup } from '../../interfaces/configuracionPopup';
+import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-buscar-personaje',
   templateUrl: './buscar-personaje.html',
   standalone: true,
-  imports: [ButtonModule, ConfirmarPopup]
+  imports: [ButtonModule, ConfirmarPopup, TableModule]
 })
 export class BuscarPersonajeComponent implements OnInit {
   private personajeService = inject(PersonajeService);
