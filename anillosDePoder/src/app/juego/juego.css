@@ -1,0 +1,16 @@
+.juego-contenedor {
+    max-width: 600px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.pregunta-texto {
+    margin-bottom: 2rem;
+    color: #e0e0e0; 
+}
+
+.respuestas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

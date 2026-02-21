@@ -1,1 +1,35 @@
-<p>juego works!</p>
+<div class="juego-contenedor">
+  @if (estadoJuego === 'inicio') {
+    <p-card header="El Reto del Anillo">
+      <p>Responde 5 preguntas correctamente sin fallar para ganar.</p>
+      <p-button label="Comenzar Aventura" icon="pi pi-play" (onClick)="empezar()"></p-button>
+    </p-card>
+  }
+
+  @if (estadoJuego === 'jugando' && preguntaActual) {
+    <p-card [header]="'Pregunta ' + (aciertos + 1) + ' de 5'">
+      <h2 class="pregunta-texto">{{ preguntaActual.pregunta }}</h2>
+      
+      <div class="respuestas-grid">
+        <p-button [label]="preguntaActual.respuesta1" [outlined]="true" (onClick)="responder(1)"></p-button>
+        <p-button [label]="preguntaActual.respuesta2" [outlined]="true" (onClick)="responder(2)"></p-button>
+        <p-button [label]="preguntaActual.respuesta3" [outlined]="true" (onClick)="responder(3)"></p-button>
+        <p-button [label]="preguntaActual.respuesta4" [outlined]="true" (onClick)="responder(4)"></p-button>
+      </div>
+    </p-card>
+  }
+
+  @if (estadoJuego === 'ganado') {
+    <p-card header="¡Victoria Gloriosa!">
+      <p>Tu conocimiento es digno de un Señor de los Elfos. ¡Has ganado!</p>
+      <p-button label="Jugar de nuevo" icon="pi pi-refresh" severity="success" (onClick)="empezar()"></p-button>
+    </p-card>
+  }
+
+  @if (estadoJuego === 'perdido') {
+    <p-card header="Derrota...">
+      <p>Has caído en las sombras. Las fuerzas de Sauron celebran tu error.</p>
+      <p-button label="Intentarlo de nuevo" icon="pi pi-refresh" severity="danger" (onClick)="empezar()"></p-button>
+    </p-card>
+  }
+</div>
