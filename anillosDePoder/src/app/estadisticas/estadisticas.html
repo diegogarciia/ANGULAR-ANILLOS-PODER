@@ -1,1 +1,24 @@
-<p>estadisticas works!</p>
+<div class="estadisticas-wrapper">
+  <div class="estadisticas-header">
+    <h2>Estadísticas</h2>
+  </div>
+
+  <div class="estadisticas-panel">
+    <div class="estadisticas-column">
+      <h3>Total Partidas Jugadas</h3>
+      <div class="estadisticas-numero oro-claro">{{ estadisticas.jugadas }}</div>
+    </div>
+
+    <div class="estadisticas-column">
+      <h3>Victorias</h3>
+      <i class="pi pi-trophy icon-oro"></i>
+      <div class="estadisticas-numero oro">{{ estadisticas.victorias }}</div>
+    </div>
+
+    <div class="estadisticas-column">
+      <h3>Derrotas</h3>
+      <i class="pi pi-times-circle icon-rojo"></i> 
+      <div class="estadisticas-numero rojo">{{ estadisticas.derrotas }}</div>
+    </div>
+  </div>
+</div>
