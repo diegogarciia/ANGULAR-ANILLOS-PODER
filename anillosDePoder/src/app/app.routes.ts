@@ -12,6 +12,9 @@ import { EditarPersonajeComponent } from './personajes/editar-personaje/editar-p
 import { Component } from '@angular/core';
 import { Padre } from './modales/padre/padre';
 import { ConfirmarPopup } from './modales/confirmar-popup/confirmar-popup'
+import { PortadoresComponent } from './portadores-component/portadores-component'; 
+import { Juego } from './juego/juego';
+import { EstadisticasComponent } from './estadisticas/estadisticas';
 
 export const routes: Routes = [
     { path: 'detalle', component: Detalle },
@@ -26,6 +29,8 @@ export const routes: Routes = [
     { path: 'editar-personaje/:id', component: EditarPersonajeComponent },
     { path: 'insertar-personaje', component: EditarPersonajeComponent},
     { path: 'modal', component: ConfirmarPopup }, 
-    { path: 'padre', component: Padre }
-
+    { path: 'padre', component: Padre },
+    { path: 'portadores', component: PortadoresComponent},
+    { path: 'juego', component: Juego},
+    { path: 'estadisticas', component: EstadisticasComponent},
 ];
